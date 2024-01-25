@@ -72,7 +72,7 @@ class _PolygonAnimationPageState extends State<PolygonAnimationPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Polygon animation'),
+        title: const Text('Polygon paint and animations'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),

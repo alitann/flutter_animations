@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                   navigationPage: TweenAnimationPage(),
                 ),
                 NavigatorButton(
-                  title: 'Custom shapes animation',
+                  title: 'Polygon paint and animations',
                   navigationPage: PolygonAnimationPage(),
                 ),
               ],
