@@ -19,41 +19,44 @@ class _TweenAnimationPageState extends State<TweenAnimationPage> {
       appBar: AppBar(
         title: const Text('Tween color animation'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: ClipPath(
-              clipper: CircleClipper(),
-              child: TweenAnimationBuilder<Color?>(
-                onEnd: () {
-                  setState(() {
-                    _color = getRandomColor();
-                  });
-                },
-                tween: ColorTween(
-                  begin: _nextColor,
-                  end: _color,
-                ),
-                duration: const Duration(seconds: 1),
-                builder: (BuildContext context, Color? color, Widget? child) {
-                  return ColorFiltered(
-                    colorFilter: ColorFilter.mode(
-                      color ?? Colors.transparent,
-                      BlendMode.modulate,
-                    ),
-                    child: child,
-                  );
-                },
-                child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.width,
-                  color: Colors.red,
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+              child: ClipPath(
+                clipper: CircleClipper(),
+                child: TweenAnimationBuilder<Color?>(
+                  onEnd: () {
+                    setState(() {
+                      _color = getRandomColor();
+                    });
+                  },
+                  tween: ColorTween(
+                    begin: _nextColor,
+                    end: _color,
+                  ),
+                  duration: const Duration(seconds: 1),
+                  builder: (BuildContext context, Color? color, Widget? child) {
+                    return ColorFiltered(
+                      colorFilter: ColorFilter.mode(
+                        color ?? Colors.transparent,
+                        BlendMode.modulate,
+                      ),
+                      child: child,
+                    );
+                  },
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.width,
+                    color: Colors.red,
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
