@@ -75,7 +75,9 @@ class _RotateAnimationsPageState extends State<RotateAnimationsPage>
     });
 
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text('Rotate animations'),
+      ),
       body: SafeArea(
         child: Center(
           child: AnimatedBuilder(

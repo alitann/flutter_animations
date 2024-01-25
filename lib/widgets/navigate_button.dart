@@ -21,9 +21,9 @@ class NavigatorButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      child: const Text(
-        'Rotate animations samples',
-        style: TextStyle(color: Colors.white),
+      child: Text(
+        title,
+        style: const TextStyle(color: Colors.white),
       ),
       onPressed: () {
         _navigateToAnimation(
