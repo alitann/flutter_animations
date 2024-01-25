@@ -21,7 +21,7 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
         children: [
           Center(
             child: AnimatedContainer(
-              curve: Curves.bounceInOut,
+              curve: _isZoomedIn ? Curves.bounceInOut : Curves.easeIn,
               width: _isZoomedIn ? 200 : MediaQuery.of(context).size.width,
               duration: const Duration(milliseconds: 500),
               child: Image.asset('assets/images/wallpaper.jpg'),
