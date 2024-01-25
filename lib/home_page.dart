@@ -2,6 +2,7 @@ import 'package:animations/pages/animated_container_page.dart';
 import 'package:animations/pages/hero_animation_page.dart';
 import 'package:animations/pages/rotate_animations_page.dart';
 import 'package:animations/pages/threed_rotate_animation_page.dart';
+import 'package:animations/pages/tween_animation_page.dart';
 import 'package:animations/widgets/navigate_button.dart';
 import 'package:flutter/material.dart';
 
@@ -36,6 +37,10 @@ class HomePage extends StatelessWidget {
                 NavigatorButton(
                   title: 'Animated container',
                   navigationPage: AnimatedContainerPage(),
+                ),
+                NavigatorButton(
+                  title: 'Tween animation',
+                  navigationPage: TweenAnimationPage(),
                 ),
               ],
             ),
