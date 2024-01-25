@@ -1,3 +1,4 @@
+import 'package:animations/pages/hero_animation_page.dart';
 import 'package:animations/pages/rotate_animations_page.dart';
 import 'package:animations/pages/threed_rotate_animation_page.dart';
 import 'package:animations/widgets/navigate_button.dart';
@@ -26,6 +27,10 @@ class HomePage extends StatelessWidget {
                 NavigatorButton(
                   title: '3D Rotate animation',
                   navigationPage: ThreeDRotateAnimationPage(),
+                ),
+                NavigatorButton(
+                  title: 'Hero animation',
+                  navigationPage: HeroAnimationPage(),
                 ),
               ],
             ),
