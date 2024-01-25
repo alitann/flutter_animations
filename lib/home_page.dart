@@ -1,5 +1,6 @@
 import 'package:animations/pages/animated_container_page.dart';
 import 'package:animations/pages/hero_animation_page.dart';
+import 'package:animations/pages/polygon_animation_page.dart';
 import 'package:animations/pages/rotate_animations_page.dart';
 import 'package:animations/pages/threed_rotate_animation_page.dart';
 import 'package:animations/pages/tween_animation_page.dart';
@@ -41,6 +42,10 @@ class HomePage extends StatelessWidget {
                 NavigatorButton(
                   title: 'Tween animation',
                   navigationPage: TweenAnimationPage(),
+                ),
+                NavigatorButton(
+                  title: 'Custom shapes animation',
+                  navigationPage: PolygonAnimationPage(),
                 ),
               ],
             ),
